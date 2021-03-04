@@ -13,8 +13,8 @@ app.use(express.json())
 app.use(express.static('public'))
 
 //controller
-const animalController = require('./controllers/contacts_controller.js')
-app.use('/animal_shelter', animalController)
+const itineraryController = require('./controllers/itinerary_controller.js')
+app.use('/itinerary', itineraryController)
 
 //body parser
 mongoose.connect(MONGODB_URI, {

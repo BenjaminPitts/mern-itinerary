@@ -31,10 +31,18 @@ input, button {
 input:hover{
   background: gold;
 }
-button:hover {
+#delete:hover {
+  background: red;
+}
+button:hover, #create:hover, #update:hover {
   background: gold;
   cursor: pointer;
 }
+details:hover {
+  background: ivory;
+  color: #090909;
+  cursor: pointer;
+  transition: .5s;
 }
 .container {
   display: flex;
@@ -51,22 +59,26 @@ button:hover {
   align-items: center;
 }
 .header {
-text-align: center
+text-align: center;
+background-image: url("https://i.imgur.com/y8LOgHM.jpg");
+background-size: cover;
+width: 100%;
 }
 .mainCage {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flext-start;
   align-items: center;
+  width: 100%
 }
 .cage {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  width: 90%;
+  align-items: flex-start;
+  width: 80%;
 }
 
 @media only screen and (max-width: 600px) {
