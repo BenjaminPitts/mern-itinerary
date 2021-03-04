@@ -1,15 +1,12 @@
 const mongoose = require('mongoose')
 
-// TODO: Update to your resource name
+const animalSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  breed: String,
+  gender: String,
+  image: String,
+  time : { type : Date, default: Date.now }
+})
+const Animal = mongoose.model('Animal', animalSchema)
 
-const contactSchema = mongoose.Schema(
-  // TODO: update your resource properties
-  {
-    name: { type: String, required: true },
-    age: { type: Number, default: 0 }
-  },
-  { timestamps: true }
-)
-
-// TODO: update your model
-module.exports = mongoose.model('Contact', contactSchema)
+module.exports = Animal

@@ -1,52 +1,42 @@
-// DEPENDENCIES
-
-// Allow Cross-Origin-Requests
-const cors = require('cors')
-// Server
+//dependencies
 const express = require('express')
-// MongoDB ORM
 const mongoose = require('mongoose')
 
-// Dependency configurations
-require('dotenv').config()
+//configuration
 const app = express()
+require('dotenv').config()
 const PORT = process.env.PORT
 const MONGODB_URI = process.env.MONGODB_URI
 
-// MIDDLEWARE
-app.use(express.json()) // use .json(), not .urlencoded()
-app.use(cors())
+//middleware
+app.use(express.json())
+app.use(express.static('public'))
 
-// DATABASE
-mongoose.connect(
-  MONGODB_URI,
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false,
-    useCreateIndex: true,
-  },
-  () => {
-    console.log('the connection with mongod is established at', MONGODB_URI)
-  }
-)
+//controller
+const animalController = require('./controllers/contacts_controller.js')
+app.use('/animal_shelter', animalController)
 
-// Optional, but likely helpful
-// Connection Error/Success
-// Define callback functions for various events
-mongoose.connection.on('error', err => console.log(err.message + ' is mongod not running?'))
-mongoose.connection.on('disconnected', () => console.log('mongo disconnected'))
-
-// TODO: Update controllers/routes to your resources
-// CONTROLLERS/ROUTES
-const contactsController = require('./controllers/contacts_controller.js')
-app.use('/contacts', contactsController)
-
-app.get('/*', (req, res) => {
-  res.redirect('/contacts')
+//body parser
+mongoose.connect(MONGODB_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useFindAndModify: false
 })
 
-// LISTEN
-app.listen(PORT, () => {
-  console.log('🎉🎊', 'Up and running on', PORT, '🎉🎊')
+// Error/success
+mongoose.connection.on('error', err =>
+  console.log(
+    err.message,
+    ' is Mongod not running?/Problem with Atlas Connection?'
+  )
+)
+mongoose.connection.on('connected', () =>
+  console.log('mongo connected: ', MONGODB_URI)
+)
+mongoose.connection.on('disconnected', () => console.log('mongo disconnected'))
+
+
+//listener
+app.listen(PORT, ()=>{
+  console.log('listening on PORT: ', PORT)
 })
