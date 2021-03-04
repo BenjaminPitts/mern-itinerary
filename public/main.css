@@ -4,7 +4,7 @@ body {
   font-family: sans;
 }
 img {
-  width: 70%;
+  width: 30%;
   border: 1px solid ivory;
   border-radius: 10%;
 }
@@ -38,7 +38,7 @@ button:hover {
 }
 .container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -49,6 +49,9 @@ button:hover {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+}
+.header {
+text-align: center
 }
 .mainCage {
   display: flex;
@@ -63,7 +66,7 @@ button:hover {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 30%;
+  width: 90%;
 }
 
 @media only screen and (max-width: 600px) {
