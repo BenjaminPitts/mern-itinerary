@@ -87,9 +87,8 @@ render=()=>{
   return (
 <div className='main'>
 <div className='header'>
-  <h1>Disney Itinerary</h1><br />
-
-  <br /><h2>Create a New Adventure:</h2>
+  <h1>Magic Kingdom <br />Itinerary Planner</h1><br /><br /><br /><br />
+  <h2>Create a New Adventure:</h2>
     <form onSubmit={this.submit}>
   <label htmlFor='name'>Name: </label>
   <input type='text' id='name' value={this.state.name} onChange={this.change} />
@@ -125,8 +124,10 @@ render=()=>{
   <input id='create' type='submit' value='Create Itinerary' />
   <br />
     </form>
+    <br /><br />
     </div>
   <br />
+  <a href='/activities.html'>Activities and Attractions</a><br />
   <br />
 
   <div className='mainCage'>

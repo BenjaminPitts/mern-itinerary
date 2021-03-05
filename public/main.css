@@ -8,6 +8,15 @@ img {
   border: 1px solid ivory;
   border-radius: 10%;
 }
+#map {
+  width: 99%;
+  border: 1px solid ivory;
+  border-radius: 10%;
+}
+label {
+  color: ivory;
+  font-weight: bolder;
+}
 h1 {
   font-size: 100px;
   font-family: cursive;
@@ -24,6 +33,33 @@ h2, h3 {
 h4 {
   margin: 0;
   padding: 0;
+}
+h6 {
+  font-size: 16px;
+  color: ivory;
+  font-style: italic;
+  font-weight: 200;
+   margin: 0;
+}
+ul {
+  width: 90%;
+}
+li {
+  font-size: 18px;
+  font-weight: 500;
+  margin: .5rem;
+}
+a {
+  text-align: center;
+  text-decoration: none;
+  font-size: 30px;
+  color: ivory;
+  padding: .5rem;
+}
+a:hover {
+  background: ivory;
+  color: gold;
+  border-radius: 55px;
 }
 input, button {
   background: ivory;
@@ -65,8 +101,8 @@ details:hover {
 text-align: center;
 background-image: url("https://i.imgur.com/y8LOgHM.jpg");
 background-size: cover;
-
 }
+
 .mainCage {
   display: flex;
   flex-direction: row;
@@ -99,5 +135,11 @@ background-size: cover;
     justify-content: center;
     align-items: center;
     width: 90%;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  a {
+    font-size: 20px;
   }
 }
