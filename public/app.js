@@ -185,13 +185,13 @@ render=()=>{
       </details>
       <button id='delete' value={list._id} onClick={this.delete}>Delete Itinerary</button>
       </details>
-
-
       <br />
       </div>
     )
   })}
+
     </div>
+    <br /><br /><br /><br />
 </div>
     )
   }
