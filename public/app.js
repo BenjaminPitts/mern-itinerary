@@ -153,6 +153,7 @@ render=()=>{
       <details>
         <summary>Edit Itinerary:</summary>
         <form id={list._id} onSubmit={this.update}>
+        <i>(Must fill out all fields)</i><br />
           <label htmlFor='name'>Name:</label>
             <input type='text' id='name' value={list.name} onChange={this.change} />
             <br />
@@ -182,7 +183,7 @@ render=()=>{
             <br />
             <input id='update' type='submit' value='Update Itinerary' />
         </form>
-      </details>
+      </details><br />
       <button id='delete' value={list._id} onClick={this.delete}>Delete Itinerary</button>
       </details>
       <br />
