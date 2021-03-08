@@ -6,6 +6,7 @@ body {
 img {
   border: 1px solid ivory;
   border-radius: 10%;
+  width: 20%;
 }
 #map {
   width: 99%;
@@ -47,7 +48,7 @@ li {
   font-size: 18px;
   font-weight: 500;
   margin: .5rem;
-  
+
 }
 a {
   text-align: center;
@@ -64,7 +65,7 @@ a:hover {
   background: #1994d7;
   color: gold;
   border-radius: 55px;
-  
+
 }
 input, button {
   background: ivory;
@@ -95,13 +96,13 @@ details:hover {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  
+
   }
 
 .logo > img {
   width: 20%;
   margin: 17px 0 0 14px;
-  
+
 }
 .logo{
   border-bottom: 2px solid #1994d7;
@@ -167,7 +168,7 @@ details:hover {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    
+
   }
   .cage {
     display: flex;
