@@ -89,6 +89,7 @@ render=()=>{
 <div className='header'>
   <h1>Magic Kingdom <br />Itinerary Planner</h1><br /><br /><br /><br />
   <h2>Create a New Adventure:</h2>
+  <div class="formCreate">
     <form onSubmit={this.submit}>
   <label htmlFor='name'>Name: </label>
   <input type='text' id='name' value={this.state.name} onChange={this.change} />
@@ -125,6 +126,7 @@ render=()=>{
   <br />
     </form>
     <br /><br />
+    </div>
     </div>
   <br />
   <a href='/activities.html'>Activities and Attractions</a><br />
