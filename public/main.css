@@ -1,27 +1,26 @@
 body {
-  background: #090909;
-  color: gold;
+  color: #FFF;
   font-family: sans;
+  background-color: #FFF;
 }
 img {
-  width: 30%;
   border: 1px solid ivory;
   border-radius: 10%;
 }
 #map {
   width: 99%;
-  border: 1px solid ivory;
+  border: 2px solid #1994d7;
   border-radius: 10%;
 }
 label {
-  color: gold;
+  color: #1994d7;
   font-weight: bolder;
 }
 h1 {
-  font-size: 100px;
+  font-size: 35px;
   font-family: cursive;
   text-align: center;
-  color: ivory;
+  color: #FFF;
   margin: 0;
   padding: 0;
 }
@@ -52,20 +51,25 @@ li {
 a {
   text-align: center;
   text-decoration: none;
+  background: #67c0f0;
+  border-radius: 20px;
+  box-shadow: 2px 4px;
   font-size: 30px;
   color: ivory;
   padding: .5rem;
+  margin-top: 20px;
 }
 a:hover {
-  background: ivory;
+  background: #1994d7;
   color: gold;
   border-radius: 55px;
+  
 }
 input, button {
   background: ivory;
 }
 input:hover{
-  background: gold;
+  background: #d9e5ed;
 }
 #delete:hover {
   background: red;
@@ -83,12 +87,24 @@ details:hover {
   cursor: pointer;
   transition: .5s;
 }
+
 .container {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  
+  }
+
+.logo > img {
+  width: 20%;
+  margin: 17px 0 0 14px;
+  
+}
+.logo{
+  border-bottom: 2px solid #1994d7;
+  margin-bottom: 17px;
 }
 .main {
   display: flex;
@@ -96,20 +112,28 @@ details:hover {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  background-color: rgb(13, 90, 205);
+  border-radius: 7px;
+  margin-top: 15px;
 }
+
 .header {
-text-align: center;
-background-image: url("https://i.imgur.com/y8LOgHM.jpg");
-background-size: cover;
+ text-align: center;
+/* background-image: url("https://i.imgur.com/y8LOgHM.jpg"); */
+}
+
+.formCreate{
+  width: 200px;
+  margin: 5px;
 }
 
 .mainCage {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flext-start;
+  justify-content: flex-start;
   align-items: center;
-  width: 80%
+  width: 100%
 }
 .cage {
   display: flex;
@@ -117,8 +141,22 @@ background-size: cover;
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
-  width: 80%;
+  width: 100%;
+  margin-left: 15px;
+  
 }
+
+#create {
+  margin-top: 10px;
+  background-color: #1994d7;
+  border: #fff;
+  color: white;
+  padding: 15px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 15px;
 
 @media only screen and (max-width: 600px) {
   .mainCage {
@@ -127,6 +165,7 @@ background-size: cover;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    
   }
   .cage {
     display: flex;
@@ -137,9 +176,30 @@ background-size: cover;
     width: 90%;
   }
   h1 {
-    font-size: 40px;
+    font-size: 20px;
+    margin-top: 15%;
   }
   a {
-    font-size: 20px;
+    font-size: 27px;
+  }
+
+  .formCreate{
+    border: 1px solid #fff;
+    width: 70%;
+    margin: 5px;
+    margin-left: 15%;
+  }
+  #create {
+    margin-top: 10px;
+
+    background-color: #1994d7; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 13px;
   }
 }
